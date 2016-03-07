@@ -1,4 +1,9 @@
-
+// testfile
+function test(){
+	
+	console.info('test');
+	
+}
 
 function body_color(){
 	var jjj = document.getElementsByTagName('body');
