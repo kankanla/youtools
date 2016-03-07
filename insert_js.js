@@ -1,4 +1,5 @@
 
+
 function body_color(){
 	var jjj = document.getElementsByTagName('body');
 	jjj[0].style.backgroundColor="rgba(114, 174, 185, 0.26)";
