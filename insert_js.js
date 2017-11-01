@@ -42,7 +42,8 @@ function abc(){
 
 
 function chk_my_item(){
-	var tag = document.getElementsByClassName('yt-uix-sessionlink g-hovercard      spf-link ');
+// 	var tag = document.getElementsByClassName('yt-uix-sessionlink g-hovercard      spf-link ');
+	var tag = document.getElementsByClassName(' yt-uix-sessionlink      spf-link ');
 		if(tag.length > 0){
 			for(var i in tag){
 				if(tag[i].href == 'https://www.youtube.com/user/icq7219388' ||
