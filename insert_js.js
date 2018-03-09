@@ -1,9 +1,3 @@
-// testfile
-function test(){
-	
-	console.info('test');
-	
-}
 
 function body_color(){
 	var jjj = document.getElementsByTagName('body');
@@ -42,19 +36,36 @@ function abc(){
 
 
 function chk_my_item(){
-// 	var tag = document.getElementsByClassName('yt-uix-sessionlink g-hovercard      spf-link ');
-	var tag = document.getElementsByClassName(' yt-uix-sessionlink      spf-link ');
-		if(tag.length > 0){
-			for(var i in tag){
-				if(tag[i].href == 'https://www.youtube.com/user/icq7219388' ||
-				   tag[i].href == 'https://www.youtube.com/user/kankanla09' || 
-				   tag[i].href == "https://www.youtube.com/channel/UCNSXxplP-UWcZFz3-wDM3RQ" ||
-				   tag[i].href == "https://www.youtube.com/channel/UCKWg8wctnd4q7z_5ojOclKA" ||
-				   tag[i].href == "https://www.youtube.com/channel/UCk0QT-xjO1y4gsa2bFyNDjQ" ){
-				   tag[i].parentNode.parentNode.parentNode.style.backgroundColor='Gold';
+	// var tag = document.getElementsByClassName('yt-uix-sessionlink g-hovercard      spf-link ');
+
+	var tag4 = document.getElementsByClassName('yt-simple-endpoint style-scope yt-formatted-string');
+		if(tag4.length > 0){
+			for(var i in tag4){
+				if(tag4[i].href == 'https://www.youtube.com/user/icq7219388' ||
+				   tag4[i].href == 'https://www.youtube.com/user/kankanla09' || 
+				   tag4[i].href == "https://www.youtube.com/channel/UCNSXxplP-UWcZFz3-wDM3RQ" ||
+				   tag4[i].href == "https://www.youtube.com/channel/UCKWg8wctnd4q7z_5ojOclKA" ||
+				   tag4[i].href == "https://www.youtube.com/channel/UCk0QT-xjO1y4gsa2bFyNDjQ" ){
+				   tag4[i].parentNode.parentNode.parentNode.style.backgroundColor='RED';
 				}
 			}
 		}
+
+
+	// var tag3 = document.getElementsByClassName(' yt-uix-sessionlink      spf-link ');
+	var tag3 = document.getElementsByClassName(' yt-uix-sessionlink      spf-link ');
+		if(tag3.length > 0){
+			for(var i in tag3){
+				if(tag3[i].href == 'https://www.youtube.com/user/icq7219388' ||
+				   tag3[i].href == 'https://www.youtube.com/user/kankanla09' || 
+				   tag3[i].href == "https://www.youtube.com/channel/UCNSXxplP-UWcZFz3-wDM3RQ" ||
+				   tag3[i].href == "https://www.youtube.com/channel/UCKWg8wctnd4q7z_5ojOclKA" ||
+				   tag3[i].href == "https://www.youtube.com/channel/UCk0QT-xjO1y4gsa2bFyNDjQ" ){
+				   tag3[i].parentNode.parentNode.parentNode.style.backgroundColor='Gold';
+				}
+			}
+		}
+
 
 	var tag2 = document.getElementsByClassName('g-hovercard');
 		if(tag2.length > 0){
@@ -75,10 +86,6 @@ function chk_del_user(){
 			for(var i in tag){
 				if(
 					tag[i].href == 'https://www.youtube.com/channel/UCPv4x_sLkl8tsBCS--aoASQ' ||
-					tag[i].href == 'https://www.youtube.com/channel/UC41FuIPvXyIYFjoGU-UCNSw' ||
-					tag[i].href == 'https://www.youtube.com/user/RyansLyfe' ||
-					tag[i].href == 'https://www.youtube.com/channel/UCQjh-JVPNWfY-KsZS3RgRHw' ||
-					tag[i].href == 'https://www.youtube.com/user/ClevverNews' ||
 					tag[i].href == 'https://www.youtube.com/channel/UCPOzcixjIIj-F7WxtFLoeWA' ||
 					tag[i].href == 'https://www.youtube.com/channel/UCvTDwUGW41jGzrKUrNAjW3w' ||
 					tag[i].href == 'https://www.youtube.com/channel/UCIrzk08B6OHq6CTEi5LTM-A' ||
@@ -92,7 +99,7 @@ function chk_del_user(){
 					tag[i].href == 'https://www.youtube.com/channel/UC9a6e6Hd7ShWcnGkNVcomoA' ||
 					tag[i].href == 'https://www.youtube.com/channel/UCNwgG5F2W8OJ4G37WYh1RqA' ||
 					tag[i].href == 'https://www.youtube.com/channel/UCMbTe5JqeDWsEHcbIzapiAQ' ||
-					tag[i].href == 'https://www.youtube.com/channel/UC5S_v9ReRER5VHPciNPabQw' 
+					tag[i].href == "https://www.youtube.com/channel/UC5S_v9ReRER5VHPciNPabQw" 
 				   ){
 				   tag[i].parentNode.parentNode.parentNode.style.backgroundColor='red';
 				   chk = "ng";
@@ -113,7 +120,8 @@ function auto_link(){
 				}
 			
 			if(ja[cont]){
-				oper = open(ja[cont].href);
+				// oper = open(ja[cont].href);
+				oper = open(ja[cont].href + '&disable_polymer=true');
 				if(oper.readyState = 4){
 					var scont = oper.document.getElementById("masthead-search-term");
 						console.log(scont);
@@ -128,7 +136,7 @@ function auto_link(){
 			}
 		}
 		
-	opentime = setInterval(aut,2500);
+	opentime = setInterval(aut,3500);
 }
 
 onchange = function(){
@@ -168,7 +176,7 @@ onload = (function(){
 		chk_my_item();
 		chk_del_user();
 		if(chk == "ok" && opener.location.hostname == "www.youtube.com"){
-			closetime = setTimeout(close,3000);
+			closetime = setTimeout(close,4500);
 		}
 			setTimeout(auto_link,6000);
 })()
